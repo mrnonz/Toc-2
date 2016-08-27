@@ -1,8 +1,7 @@
 from math import *
 from decimal import *
 
-precision = 10**(-100)
-decimalNumber = 100
+precision = 10**(-50)
 
 def average(x, y):
 	return (x + y) / 2.0
@@ -24,7 +23,6 @@ def sqrt_apox(guess, number):
 def sqrtNewton(number):
 	return Decimal(sqrt_apox(1, number))
 
-getcontext().prec = decimalNumber
 
 findSqrt = int(raw_input("Insert your number [sqrt] :: "))
 
