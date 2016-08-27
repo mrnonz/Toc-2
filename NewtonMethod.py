@@ -1,6 +1,7 @@
 from math import *
+from decimal import *
 
-precision = 0.000000000001
+precision = 10**(-100)
 
 def average(x, y):
 	return (x + y) / 2.0
@@ -20,7 +21,9 @@ def sqrt_apox(guess, number):
 	return guess
 
 def sqrtNewton(number):
-	return sqrt_apox(1, number)
+	return Decimal(sqrt_apox(1, number))
+
+getcontext().prec = 10
 
 findSqrt = int(raw_input("Insert your number [sqrt] :: "))
 
