@@ -1,6 +1,7 @@
 from __future__ import division
 from math import *
 from random import *
+from decimal import *
 
 def checkInradius(x, y):
 	z = x**2 + y**2
@@ -24,7 +25,7 @@ def monteCarlo(N):
 
 	result = countInradius / N
 
-	return result
+	return Decimal(result)
 
 N = int(raw_input('Insert your N (random) :: '))
 
