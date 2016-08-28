@@ -2,6 +2,7 @@ from __future__ import division
 from math import *
 from random import *
 from decimal import *
+import time
 
 def checkInradius(x, y):
 	z = x**2 + y**2
@@ -17,6 +18,7 @@ def monteCarlo(N):
 	countInradius = 0
 	stopPrint = 1
 	
+	method_starts = time.time()
 	for i in range(N):
 		random_x = random()
 		random_y = random()
@@ -29,7 +31,10 @@ def monteCarlo(N):
 			result = Decimal(countInradius / (i+1))
 			result *= 4
 
-			print "When sample space is " + str(stopPrint) + ' :: Pi is ' + str(result)
+			now = time.time()
+			rount_time = float("{0:.5f}".format(now - method_starts))
+			print "[Time " + str(rount_time) + " s] When sample space is " + str(stopPrint) + ' :: Pi is ' + str(result)
+			
 			stopPrint *= 10
 
   
