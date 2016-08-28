@@ -9,5 +9,11 @@ def checkInradius(x, y):
 	else:
 		return False
 
+def monteCarlo(N):
+	return 1.23
 
 N = int(raw_input('Insert your N (random) :: '))
+
+result = monteCarlo(N)
+
+print 'N = ' + str(N) + ' :: Pi approx is --> ' + str(result)
