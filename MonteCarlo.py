@@ -15,6 +15,7 @@ def checkInradius(x, y):
 def monteCarlo(N):
 
 	countInradius = 0
+	stopPrint = 1
 	
 	for i in range(N):
 		random_x = random()
@@ -23,12 +24,15 @@ def monteCarlo(N):
 		if checkInradius(random_x, random_y):
 			countInradius += 1
 
-	result = countInradius / N
+		if i+1 == stopPrint:
 
-	return Decimal(result)
+			result = Decimal(countInradius / (i+1))
+			result *= 4
 
-N = int(raw_input('Insert your N (random) :: '))
+			print "When sample space is " + str(stopPrint) + ' :: Pi is ' + str(result)
+			stopPrint *= 10
 
-result = monteCarlo(N)
+  
+N = int(raw_input('Insert your Maximum sample space :: '))
 
-print 'N = ' + str(N) + ' :: Pi approx is --> ' + str(result*4)
+monteCarlo(N)
