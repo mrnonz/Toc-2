@@ -4,6 +4,7 @@ from random import *
 from decimal import *
 import time
 
+
 def checkInradius(x, y):
 	z = x**2 + y**2
 	z = sqrt(z)
@@ -13,11 +14,12 @@ def checkInradius(x, y):
 	else:
 		return False
 
+
 def monteCarlo(N):
 
 	countInradius = 0
 	stopPrint = 1
-	
+
 	method_starts = time.time()
 	for i in range(N):
 		random_x = random()
@@ -34,10 +36,10 @@ def monteCarlo(N):
 			now = time.time()
 			rount_time = float("{0:.5f}".format(now - method_starts))
 			print "[Time " + str(rount_time) + " s] When sample space is " + str(stopPrint) + ' :: Pi is ' + str(result)
-			
+
 			stopPrint *= 10
 
-  
+
 N = int(raw_input('Insert your Maximum sample space :: '))
 
 monteCarlo(N)
