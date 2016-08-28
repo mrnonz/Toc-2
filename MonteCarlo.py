@@ -1,4 +1,5 @@
 from math import *
+from random import *
 
 def checkInradius(x, y):
 	z = x**2 + y**2
@@ -10,10 +11,17 @@ def checkInradius(x, y):
 		return False
 
 def monteCarlo(N):
-	return 1.23
+	
+	for i in range(N):
+		random_x = random()
+		random_y = random()
+
+		print str(random_x) + ' ' + str(random_y)
+
+	return 1.12
 
 N = int(raw_input('Insert your N (random) :: '))
 
 result = monteCarlo(N)
 
-print 'N = ' + str(N) + ' :: Pi approx is --> ' + str(result)
+print 'N = ' + str(N) + ' :: Pi approx is --> ' + str(result*4)
