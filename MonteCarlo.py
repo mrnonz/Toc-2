@@ -1,3 +1,4 @@
+from __future__ import division
 from math import *
 from random import *
 
@@ -11,14 +12,19 @@ def checkInradius(x, y):
 		return False
 
 def monteCarlo(N):
+
+	countInradius = 0
 	
 	for i in range(N):
 		random_x = random()
 		random_y = random()
 
-		print str(random_x) + ' ' + str(random_y)
+		if checkInradius(random_x, random_y):
+			countInradius += 1
 
-	return 1.12
+	result = countInradius / N
+
+	return result
 
 N = int(raw_input('Insert your N (random) :: '))
 
