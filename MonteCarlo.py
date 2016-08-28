@@ -1,3 +1,5 @@
 from math import *
 
-print 'test'
+N = int(raw_input('Insert your N (random) :: '))
+
+print N
