@@ -1,8 +1,8 @@
 from math import *
 from decimal import *
 
-precision = 10**(-20)
-precContext = 5000
+precision = 10**(-5)
+precContext = 50000
 
 myothercontext = Context(precContext, rounding=ROUND_HALF_DOWN)
 setcontext(myothercontext)
@@ -38,7 +38,7 @@ findSqrt = int(raw_input("Insert your number [sqrt] :: "))
 result = "\n[prec = %s] Sqrt(%s) = %s" % \
 	(precContext, findSqrt, sqrtNewton(findSqrt))
 
-print result
+# print result
 
 fileResult = open('Newton.txt', 'a')
 fileResult.write(result)
