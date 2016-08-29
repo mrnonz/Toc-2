@@ -1,3 +1,0 @@
-#python NewtonMethod.py
-Insert your number [sqrt] :: 17
-4.12310562561766058564671766362152993679046630859375
