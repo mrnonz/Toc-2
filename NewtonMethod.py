@@ -2,7 +2,7 @@ from math import *
 from decimal import *
 
 precision = 10**(-20)
-precContext = 500
+precContext = 5000
 
 myothercontext = Context(precContext, rounding=ROUND_HALF_DOWN)
 setcontext(myothercontext)
