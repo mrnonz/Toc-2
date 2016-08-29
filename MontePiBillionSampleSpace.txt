@@ -1,0 +1,12 @@
+# python MonteCarlo.py
+Insert your Maximum sample space :: 1000000000
+[Time 62.06068 s] When sample space is 1 :: Pi is 4
+[Time 62.09286 s] When sample space is 10 :: Pi is 3.600000000000000088817841970
+[Time 62.09326 s] When sample space is 100 :: Pi is 3.240000000000000213162820728
+[Time 62.10789 s] When sample space is 1000 :: Pi is 3.244000000000000216715534407
+[Time 62.15859 s] When sample space is 10000 :: Pi is 3.153999999999999914734871709
+[Time 62.31108 s] When sample space is 100000 :: Pi is 3.146240000000000147650780491
+[Time 63.75391 s] When sample space is 1000000 :: Pi is 3.143244000000000148986600834
+[Time 74.07626 s] When sample space is 10000000 :: Pi is 3.141561999999999965638153299
+[Time 153.7668 s] When sample space is 100000000 :: Pi is 3.141673679999999801992771609
+[Time 882.32715 s] When sample space is 1000000000 :: Pi is 3.141574008000000084450675786
