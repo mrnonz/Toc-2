@@ -3,9 +3,12 @@ from decimal import *
 
 precision = 10**(-50)
 
+myothercontext = Context(prec=1000, rounding=ROUND_HALF_DOWN)
+setcontext(myothercontext)
+
 
 def average(x, y):
-	return (x + y) / 2.0
+	return Decimal((x + y)) / Decimal(2.0)
 
 
 def improve(guess, number):
@@ -26,7 +29,7 @@ def sqrt_apox(guess, number):
 
 
 def sqrtNewton(number):
-	return Decimal(sqrt_apox(1, number))
+	return sqrt_apox(1, number)
 
 
 findSqrt = int(raw_input("Insert your number [sqrt] :: "))
