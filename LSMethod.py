@@ -1,5 +1,6 @@
 import csv
 import numpy as np
+import matplotlib.pyplot as plt
 
 dataX = []
 dataY = []
@@ -22,3 +23,6 @@ y = np.array(dataY)
 
 # rewrite line equation
 A = np.vstack([x, np.ones(len(x))]).T
+m, c = np.linalg.lstsq(A, y)[0]
+
+# print (m, c)
