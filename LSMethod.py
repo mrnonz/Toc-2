@@ -1,4 +1,5 @@
 import csv
+import numpy as np
 
 dataX = []
 dataY = []
@@ -14,3 +15,10 @@ with open('LS.csv', 'rb') as fileLS:
             # print "%s %s " % (row[0], row[1])
 
         thisData = True
+
+
+x = np.array(dataX)
+y = np.array(dataY)
+
+# rewrite line equation
+A = np.vstack([x, np.ones(len(x))]).T
