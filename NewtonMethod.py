@@ -2,8 +2,9 @@ from math import *
 from decimal import *
 
 precision = 10**(-50)
+precContext = 1000
 
-myothercontext = Context(prec=1000, rounding=ROUND_HALF_DOWN)
+myothercontext = Context(precContext, rounding=ROUND_HALF_DOWN)
 setcontext(myothercontext)
 
 
