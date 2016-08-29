@@ -35,4 +35,4 @@ def sqrtNewton(number):
 
 findSqrt = int(raw_input("Insert your number [sqrt] :: "))
 
-print sqrtNewton(findSqrt)
+print "Sqrt(%s) = %s" % (findSqrt, sqrtNewton(findSqrt))
