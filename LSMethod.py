@@ -1,6 +1,7 @@
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
+from decimal import *
 
 dataX = []
 dataY = []
@@ -49,8 +50,8 @@ equation = x
 equation = multiplyList(equation, m)
 equation = addList(equation, c)
 
-print "Equation have m = %s and c = %s" % (m, c)
-print "Formula is y = %sx + %s" % (m, c)
+print "Equation have m = %s and c = %s" % (Decimal(m), Decimal(c))
+print "Formula is y = %sx + %s" % (Decimal(m), Decimal(c))
 
 plt.plot(x, y, 'o', label='Raw data', markersize=3)
 plt.plot(x, equation, 'r', label='Fitted line')
